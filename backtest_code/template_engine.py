@@ -13,13 +13,15 @@ class TemplateEngine:
         # 모든 줄바꿈마다 공백 8칸을 강제로 집어넣어 for 문 안에 들어가도록 함
         indented_code = strategy_code.strip().replace('\n', '\n        ')
 
-        return f"""
+        return f"""     
+        # 예시)
 import pandas as pd
 from market_data import fetch_all_market_stocks # 전 종목 데이터를 가져왔다고 가정
 
 # --- 유니버스 설정 ---
 {universe_setup}
 
+# 백테스트를 돌린다면 이런 식으로
 def run_backtest():
     for stock in TARGET_UNIVERSE:
         print(f"[*] 분석 중: {{stock}}")
