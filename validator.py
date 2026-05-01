@@ -1,8 +1,8 @@
 import ast  # AST 모듈
 
 class CodeValidator:
-    # 허용된 모듈 목록
-    ALLOWED_MODULES = {'pandas', 'numpy', 'backtrader', 'talib', 'datetime', 'math'}
+    # 허용된 모듈 목록, 라이브러리는 이 범위 내에서만 사용 가능
+    ALLOWED_MODULES = {'pandas', 'numpy', 'backtrader', 'datetime', 'math'}
     # 사용 금지된 이름 목록 (모듈, 함수 등)
     FORBIDDEN_NAMES = {'os', 'subprocess', 'system', 'eval', 'exec', 'open', 'socket', 'requests'}
 
